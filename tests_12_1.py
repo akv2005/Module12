@@ -2,6 +2,7 @@ import unittest
 import runner
 
 class RunnerTest(unittest.TestCase):
+
     def test_walk(self):
         ocr = runner.Runner('Вася')
         for _ in range(10):
