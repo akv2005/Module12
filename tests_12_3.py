@@ -5,12 +5,14 @@ import runner1
 class RunnerTest(unittest.TestCase):
     is_frozen = True
 
+    @unittest.skipIf(is_frozen == True, 'Тесты в этом кейсе заморожены')
     def test_walk(self):
         ocr = runner.Runner('Вася')
         for _ in range(10):
             ocr.walk()
         self.assertEqual(ocr.distance, 50)
 
+    @unittest.skipIf(is_frozen == True, 'Тесты в этом кейсе заморожены')
     def test_run(self):
         ocr = runner.Runner('Вася')
         for _ in range(10):
@@ -51,11 +53,13 @@ class TournamentTest(unittest.TestCase):
         self.all_results[1] = self.result.start()
         self.assertTrue(self.usein,self.nic)
 
+    @unittest.skipIf(is_frozen == True, 'Тесты в этом кейсе заморожены')
     def test_run2(self):
         self.result = runner1.Tournament(90, self.nic, self.anrey)
         self.all_results[2] = self.result.start()
         self.assertTrue(self.anrey, self.nic)
 
+    @unittest.skipIf(is_frozen == True, 'Тесты в этом кейсе заморожены')
     def test_run3(self):
         self.result = runner1.Tournament(90, self.anrey, self.usein, self.nic)
         self.all_results[3] = self.result.start()
