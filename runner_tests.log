@@ -1,0 +1,10 @@
+2024-07-23 00:11:14,570 | WARNING | Неверный тип данных для имени экземпляра Runner
+Traceback (most recent call last):
+  File "D:\PHYTON\Module12\tests12_4.py", line 26, in test_run
+    raise TypeError(f'Имя не может быть {type(ocr.name).__name__}')
+TypeError: Имя не может быть int
+2024-07-23 00:11:14,572 | WARNING | Скорость не может быть отрицательной,
+Traceback (most recent call last):
+  File "D:\PHYTON\Module12\tests12_4.py", line 13, in test_walk
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас: {ocr.speed}')
+ValueError: Скорость не может быть отрицательной, сейчас: -5
